@@ -1,0 +1,11 @@
+name: Listen to issue
+on: issues
+
+jobs:
+  listen-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull repository
+        uses: actions/checkout@v3
+      - name: Listen to issue event
+        run: echo "Issue: ${{ github.event.issue }}"
