@@ -12,9 +12,9 @@ jobs:
         with:
           node-version: '18'
       - name: Build project
-        runs: npm ci
+        run: npm ci
       - name: Run lint
-        runs: npm run lint
+        run: npm run lint
   
   test:
     needs: lint
@@ -27,9 +27,9 @@ jobs:
         with:
           node-version: '18'
       - name: Build project
-        runs: npm ci
+        run: npm ci
       - name: Run tests
-        runs: npm test
+        run: npm test
 
   deploy:
     needs: test
@@ -42,6 +42,6 @@ jobs:
         with:
           node-version: '18'
       - name: Build project
-        runs: npm ci
+        run: npm ci
       - name: Deploy
-        runs: echo "Deploying..."
+        run: echo "Deploying..."
