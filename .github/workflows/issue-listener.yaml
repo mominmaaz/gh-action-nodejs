@@ -5,7 +5,5 @@ jobs:
   issue_listener:
     runs-on: ubuntu-latest
     steps:
-      - name: Pull repository
-        uses: actions/checkout@v3
       - name: Listen to issue event
-        run: echo "Issue: ${{ github }}"
+        run: echo "Issue: ${{ toJSON(github.event) }}"
